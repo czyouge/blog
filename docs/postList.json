@@ -1,1 +1,1 @@
-{"labelColorDict": {"about": "#aaaaaa", "bug": "#d73a4a", "documentation": "#0075ca", "duplicate": "#cfd3d7", "enhancement": "#a2eeef", "good first issue": "#7057ff", "help wanted": "#008672", "invalid": "#e4e669", "question": "#d876e3", "wontfix": "#ffffff"}}
+{"P2": {"labels": ["comment"], "postTitle": "\u6545\u4e8b", "postUrl": "post/gu-shi.html", "createdDate": "2025-03-26", "dateLabelColor": "#0969da"}, "labelColorDict": {"about": "#aaaaaa", "comment": "#0e8a16", "documentation": "#0075ca", "enhancement": "#a2eeef", "story": "#FBCA04"}}
