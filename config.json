@@ -1,15 +1,15 @@
 {
     "title":"虫子游戈",
-    "homeUrl":"http://blog.czyouge.xyz",
+    "homeUrl":"http://www.czyouge.xyz",
     "subTitle":"Since 2025",
     "avatarUrl":"https://www.czyouge.xyz/blog/avatar.png",
-    "singlePage":["link","about"],
+    "singlePage":["link"],
+    "exlink":{"about":"https://www.czyouge.xyz/about/"},
     "GMEEK_VERSION":"last",
     "allHead":"<script src='https://blog.meekdai.com/Gmeek/plugins/GmeekVercount.js'></script>",
     "script":"<script src='https://blog.meekdai.com/Gmeek/plugins/GmeekTOC.js'></script>",
     "startSite":"03/08/2025",
     "onePageListNum":20,
-    "singlePage":["about"],
     "i18n":"CN",
     "UTC":8
 }
