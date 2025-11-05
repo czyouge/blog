@@ -1,5 +1,17 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>虫子游戈</title><link>https://blog.czyouge.xyz</link><description>Since 2025</description><copyright>虫子游戈</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://www.czyouge.xyz/blog/avatar.png</url><title>avatar</title><link>https://blog.czyouge.xyz</link></image><lastBuildDate>Thu, 30 Oct 2025 11:07:08 +0000</lastBuildDate><managingEditor>虫子游戈</managingEditor><ttl>60</ttl><webMaster>虫子游戈</webMaster><item><title>1 Million Citation! How Yoshua Bengio Defined an Era of AI</title><link>https://blog.czyouge.xyz/post/1%20Million%20Citation%21%20How%20Yoshua%20Bengio%20Defined%20an%20Era%20of%20AI.html</link><description>Computer scientist Yoshua Bengio has made history, becoming the first scientist to surpass 1 million citations on Google Scholar.
+<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>虫子游戈</title><link>https://blog.czyouge.xyz</link><description>Since 2025</description><copyright>虫子游戈</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://www.czyouge.xyz/blog/avatar.png</url><title>avatar</title><link>https://blog.czyouge.xyz</link></image><lastBuildDate>Wed, 05 Nov 2025 09:21:50 +0000</lastBuildDate><managingEditor>虫子游戈</managingEditor><ttl>60</ttl><webMaster>虫子游戈</webMaster><item><title>uv的一些基本用法</title><link>https://blog.czyouge.xyz/post/uv-de-yi-xie-ji-ben-yong-fa.html</link><description>为了解决项目之间的依赖冲突，使用以下命令创建虚拟环境：
+
+```
+python -m venv .venv
+```
+
+但 uv 更方便，只需这样就能初始化：
+
+```
+uv init
+```
+
+使用 pyproject.toml 文件来管理配置文件。</description><guid isPermaLink="true">https://blog.czyouge.xyz/post/uv-de-yi-xie-ji-ben-yong-fa.html</guid><pubDate>Wed, 05 Nov 2025 09:21:19 +0000</pubDate></item><item><title>1 Million Citation! How Yoshua Bengio Defined an Era of AI</title><link>https://blog.czyouge.xyz/post/1%20Million%20Citation%21%20How%20Yoshua%20Bengio%20Defined%20an%20Era%20of%20AI.html</link><description>Computer scientist Yoshua Bengio has made history, becoming the first scientist to surpass 1 million citations on Google Scholar.
 
 ![](https://i.imgur.com/OoYo71p.png)
 
