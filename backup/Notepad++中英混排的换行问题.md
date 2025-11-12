@@ -4,7 +4,7 @@ Notepad++ 是我日常工作的重要利器。不过原生的并不够用，比�
 
 1. 安装一个新插件：插件 → 插件管理 → NppExec；
 2. Notepad++ 会自动安装并重启；
-3. 进入该插件，选择`Execute NppExec Script`，然后保存以下：
+3. 进入该插件，选择`Execute NppExec Script`，然后保存：
 
 ```
 sci_sendmsg SCI_SETWRAPMODE SC_WRAP_CHAR  
