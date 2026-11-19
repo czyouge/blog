@@ -1,0 +1,61 @@
+name: Publish retired blog redirects
+on:
+  workflow_dispatch:
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+concurrency:
+  group: pages
+  cancel-in-progress: false
+jobs:
+  redirect:
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          repository: czyouge/czyouge.github.io
+          ref: master
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Generate permanent-path redirect pages
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          from urllib.parse import quote
+          import html, json
+          root = Path('redirects')
+          root.mkdir()
+          entries = json.loads(Path('data/legacy_urls.json').read_text(encoding='utf-8'))
+          for entry in entries:
+              if entry['host'] != 'blog.czyouge.xyz':
+                  continue
+              path = entry['path']
+              target = 'https://www.czyouge.xyz' + quote(path, safe='/%:+!')
+              relative = path.lstrip('/')
+              if path.endswith('/'):
+                  relative += 'index.html'
+              output = root / relative
+              output.parent.mkdir(parents=True, exist_ok=True)
+              markup = '<!doctype html><html lang="zh-CN"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">'
+              markup += '<title>博客已迁移 · 虫子游戈</title><link rel="canonical" href="' + html.escape(target, quote=True) + '">'
+              markup += '<meta http-equiv="refresh" content="0;url=' + html.escape(target, quote=True) + '">'
+              markup += '<script>location.replace(' + json.dumps(target) + '+location.search+location.hash)</script>'
+              markup += '<p>博客已迁移。<a href="' + html.escape(target, quote=True) + '">继续阅读</a></p></html>'
+              output.write_text(markup, encoding='utf-8')
+          fallback = '<!doctype html><meta charset="utf-8"><title>博客已迁移</title><script>location.replace("https://www.czyouge.xyz"+location.pathname+location.search+location.hash)</script><a href="https://www.czyouge.xyz/">前往虫子游戈博客</a>'
+          (root/'404.html').write_text(fallback, encoding='utf-8')
+          (root/'CNAME').write_text('blog.czyouge.xyz\n', encoding='utf-8')
+          (root/'.nojekyll').write_text('', encoding='utf-8')
+          assert (root/'index.html').exists()
+          print('Built', len(list(root.rglob('*.html'))), 'redirect pages. No scheduled updates.')
+          PY
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: redirects
+      - uses: actions/deploy-pages@v4
+        id: deployment

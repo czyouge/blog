@@ -1,11 +1,9 @@
-# 虫子游戈：旧博客域名的兼容发布
+# 虫子游戈：旧博客存档
 
-本站已统一迁移到 Hugo。日常写作和网站源码只维护在 [czyouge/czyouge.github.io](https://github.com/czyouge/czyouge.github.io)。
+正式博客和唯一写作仓库已统一到 [czyouge/czyouge.github.io](https://github.com/czyouge/czyouge.github.io)。请访问 **[www.czyouge.xyz](https://www.czyouge.xyz/)**。
 
-- 主站：[www.czyouge.xyz](https://www.czyouge.xyz/)
-- 本仓库继续托管 [blog.czyouge.xyz](https://blog.czyouge.xyz/)，保留旧文章的 `.html` 地址。
-- `.github/workflows/hugo-mirror.yml` 从主仓库读取同一份源码并发布，默认每小时同步；也可在 Actions 中手动运行。
-- 本仓库原有 `backup/`、`docs/`、Gmeek 配置仅保留作迁移存档，不再编辑或用于发布。原 Issues 和提交历史保留。
-- 写作和预览操作见主仓库的 [README](https://github.com/czyouge/czyouge.github.io#readme)。
+原来的 17 篇文章已迁入主站。本仓库的备份、Issues 和历史保留，仅用于存档，不再写作或定时同步。
 
-GitHub 可能暂停长期无仓库活动的定时任务；若发现同步停止，请在 Actions 中重新启用并运行镜像工作流。
+旧域名 blog.czyouge.xyz 只保留一次发布的静态跳转页。legacy-redirects.yml 仅支持手动运行，没有定时任务，也不运行 Hugo 或 Gmeek。
+
+本仓库原 backup/、docs/ 和 Gmeek 配置属于历史备份，均不参与当前网站生成。
